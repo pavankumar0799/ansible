@@ -9,5 +9,6 @@
 
   - name: run nginx
     ansible.builtin.service:
-      name: started
+      name: nginx
+      state: started
       enabled: yes
