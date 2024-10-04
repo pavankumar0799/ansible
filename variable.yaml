@@ -1,8 +1,8 @@
-- name: print the variables
+- name: print the var
   hosts: web
   variable:
   - vars.yaml
   tasks:
   - name: print the variable
     ansible.builtin.debug:
-     msg: "i am lerning {{course}} duration {{120}} with {{name}}" 
+     msg: "i am lerning {{course}} during {{duration}} with {{name}}" 
