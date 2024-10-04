@@ -1,0 +1,22 @@
+- name: print the data types
+  hosts: local # connecting to local server
+  connection: local # for locat host
+  vars:
+    course: "devops with aws"
+    duration: "120"
+    name: "pavankumar"
+    topics:
+    - linux
+    - aws
+    - ansible
+    - terraform
+    - jenkins
+    live: true #boolean
+    tools:
+      ci: jenkins
+      cm: ansible
+      cloud: terraform
+  tasks:
+  - name: data_types information
+    ansible.builtin.debug:
+      msg: "i am learnig {{course}} time {{duration}} name is {{name}} topics is {{topics}} tools is {{tools}}"
