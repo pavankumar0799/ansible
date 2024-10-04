@@ -1,8 +1,10 @@
 - name: check the number
   hosts: local
   connection: local
-  vars:
-   number: 10
+  var_promp:
+  - name: number
+    promt: please enter the numer
+    private: false
   tasks: 
   - name: check the number
     ansible.builtin.debug:
