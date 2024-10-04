@@ -5,14 +5,14 @@
     course: "devops with aws"
     duration: "120"
     name: "pavankumar"
-    topics:
+    topics: #list
     - linux
     - aws
     - ansible
     - terraform
     - jenkins
     live: true #boolean
-    tools:
+    tools: #map
       ci: jenkins
       cm: ansible
       cloud: terraform
