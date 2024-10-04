@@ -1,7 +1,7 @@
 - name: print the variables
   hosts: web
   variable:
-    vars.yaml
+  - vars.yaml
 
    
   tasks:
