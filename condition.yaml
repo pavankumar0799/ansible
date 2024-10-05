@@ -1,12 +1,32 @@
-- name: check the number
+# - name: check the number
+#   hosts: local
+#   connection: local
+#   var_promp:
+#   - name: number
+#     promt: please enter the numer
+#     private: false
+#   tasks: 
+#   - name: check the number
+#     ansible.builtin.debug:
+#       msg: "check the {{number}} is less than 12"
+#     when: number < 12  
+
+- name: check a number is less than 10 or not
   hosts: local
   connection: local
-  var_promp:
-  - name: number
-    promt: please enter the numer
-    private: false
-  tasks: 
-  - name: check the number
+  vars_prompt:
+  - name: my_number
+    prompt: Please enter the number
+    private: false # not confidential
+  # vars:
+  #   my_number: 139 # number
+  tasks:
+  - name: print this if less than 10
     ansible.builtin.debug:
-      msg: "check the {{number}} is less than 12"
-    when: number < 12  
+      msg: "Given number {{ my_number }} is less than 10"
+    when: my_number | int < 10 # conditional expression
+
+  - name: print this if greater than or equal to 10
+    ansible.builtin.debug:
+      msg: "Given number {{ my_number }} greater than or equal to 10"
+    when: my_number | int >= 10
