@@ -8,7 +8,11 @@
     ignore_errors: true
   - name: print the user info
     ansible.builtin.debug:
-      msg: "user info {{USER}}"  
+      msg: "user info {{USER}}" 
+
+  - name: crete user
+    ansible.builtin.command: useradd expense
+    when: USER.rc !=o     
 
 # - name: create user
 #   hosts: web
