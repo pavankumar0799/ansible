@@ -3,7 +3,7 @@
   become: yes
   tasks: 
   - name: checking the user exit or not
-    ansible.builtin.cammand: id expense
+    ansible.builtin.command: id expense
     register: USER
   - name: print the user info
     ansible.builtin.debug:
