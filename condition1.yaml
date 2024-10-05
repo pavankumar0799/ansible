@@ -10,9 +10,9 @@
     ansible.builtin.debug:
       msg: "user info {{USER}}" 
 
-  - name: crete user
+  - name: create user
     ansible.builtin.command: useradd expense
-    when: USER.rc !=o     
+    when: USER.rc !=0    
 
 # - name: create user
 #   hosts: web
