@@ -5,7 +5,7 @@
   - name: checking the user exit or not
     ansible.builtin.command: id expense
     register: USER
-    ignore_error: true
+    ignore_errors: true
   - name: print the user info
     ansible.builtin.debug:
       msg: "user info {{USER}}"  
