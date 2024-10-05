@@ -3,8 +3,21 @@
   become: yes
   tasks: 
   - name: checking the user created or not
-    ansible builtin.cammand: id expense
+    ansible.builtin.cammand: id expense
     register: user
-  - name: print the user
-    ansible builtin.debug:
+  - name: print the user info
+    ansible.builtin.debug:
       msg: "user info {{user}}"  
+
+# - name: create user
+#   hosts: web
+#   become: yes
+#   tasks:
+#   - name: check user exist or not
+#     ansible.builtin.command: id expense
+#     register: USER #here USER is a variable that gets output from above command
+#     ignore_errors: True
+
+#   - name: print the user information
+#     ansible.builtin.debug:
+#       msg: "user info: {{ USER }}"
