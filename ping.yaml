@@ -9,3 +9,11 @@
   tasks: #list of task
   - name: ping the server
     ansible.builtin.pnig:
+
+
+
+- name: ping the server
+  host: web
+  tasks: 
+  - name: ping the server
+    ansible.builtin.ping:     
