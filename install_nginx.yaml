@@ -1,6 +1,6 @@
 
 - name: nginx install and run
-  hosts: 172.31.81.216
+  hosts: web
   become: yes
   tasks: 
   - name: install nginx
