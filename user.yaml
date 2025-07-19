@@ -5,10 +5,10 @@
   tasks:
   - name: user exit or not
     ansible.builtin.command: id expense
-     register: user
+    register: user
   - name: print the user
     ansible.builtin.debug:
      mesg: "user information: {{user}}"  
   - name: create the user
     ansible builtin.command: useradd expense
-     when: user.rc!=0   
+    when: user.rc!=0   
