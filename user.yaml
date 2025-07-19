@@ -9,7 +9,7 @@
     ignore_errors: True
   - name: print the user info
     ansible.builtin.debug:
-    msg: "user information: {{user}}"  
+    msg: "user info: {{ user }}"  
    
   - name: create the user
     ansible builtin.command: useradd expense
