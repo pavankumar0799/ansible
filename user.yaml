@@ -3,7 +3,7 @@
   hosts: web
   become: yes
   tasks:
-  - name: user exit or not
+  - name: check user exit or not
     ansible.builtin.command: id expense
     register: user
     ignore_error: true
