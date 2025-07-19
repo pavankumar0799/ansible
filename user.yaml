@@ -6,9 +6,9 @@
   - name: user exit or not
     ansible.builtin.command: id expense
     register: user
-  - name: print the user
+  - name: print the user info
     ansible.builtin.debug:
      mesg: "user information: {{user}}"  
-  - name: create the user
-    ansible builtin.command: useradd expense
-    when: user.rc!=0   
+  # - name: create the user
+  #   ansible builtin.command: useradd expense
+  #   when: user.rc!=0   
