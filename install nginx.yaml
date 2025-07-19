@@ -1,0 +1,13 @@
+
+- name: install nginx and run
+  host: 172.31.81.216
+  become: yes
+  tasks: 
+  - name: install nginx
+    ansible.builtin.package:
+    name: nginx
+    state: present
+  - name: start the nginx
+    ansible.builtin.service:
+    name: nginx
+    state: yes  
